@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA1858711DCC953000161AE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1858701DCC953000161AE5 /* main.m */; };
+		EA1858741DCC953000161AE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1858731DCC953000161AE5 /* AppDelegate.m */; };
+		EA1858771DCC953000161AE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1858761DCC953000161AE5 /* ViewController.m */; };
+		EA18587A1DCC953000161AE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1858781DCC953000161AE5 /* Main.storyboard */; };
+		EA18587C1DCC953000161AE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA18587B1DCC953000161AE5 /* Assets.xcassets */; };
+		EA18587F1DCC953000161AE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA18587D1DCC953000161AE5 /* LaunchScreen.storyboard */; };
+		EA18588A1DCC953000161AE5 /* avplayerCuterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1858891DCC953000161AE5 /* avplayerCuterTests.m */; };
+		EA1858951DCC953000161AE5 /* avplayerCuterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1858941DCC953000161AE5 /* avplayerCuterUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA1858861DCC953000161AE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA1858641DCC953000161AE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA18586B1DCC953000161AE5;
+			remoteInfo = avplayerCuter;
+		};
+		EA1858911DCC953000161AE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA1858641DCC953000161AE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA18586B1DCC953000161AE5;
+			remoteInfo = avplayerCuter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA18586C1DCC953000161AE5 /* avplayerCuter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = avplayerCuter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1858701DCC953000161AE5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA1858721DCC953000161AE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA1858731DCC953000161AE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA1858751DCC953000161AE5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA1858761DCC953000161AE5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA1858791DCC953000161AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA18587B1DCC953000161AE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA18587E1DCC953000161AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA1858801DCC953000161AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA1858851DCC953000161AE5 /* avplayerCuterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = avplayerCuterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1858891DCC953000161AE5 /* avplayerCuterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = avplayerCuterTests.m; sourceTree = "<group>"; };
+		EA18588B1DCC953000161AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA1858901DCC953000161AE5 /* avplayerCuterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = avplayerCuterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1858941DCC953000161AE5 /* avplayerCuterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = avplayerCuterUITests.m; sourceTree = "<group>"; };
+		EA1858961DCC953000161AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA1858691DCC953000161AE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1858821DCC953000161AE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA18588D1DCC953000161AE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA1858631DCC953000161AE5 = {
+			isa = PBXGroup;
+			children = (
+				EA18586E1DCC953000161AE5 /* avplayerCuter */,
+				EA1858881DCC953000161AE5 /* avplayerCuterTests */,
+				EA1858931DCC953000161AE5 /* avplayerCuterUITests */,
+				EA18586D1DCC953000161AE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA18586D1DCC953000161AE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA18586C1DCC953000161AE5 /* avplayerCuter.app */,
+				EA1858851DCC953000161AE5 /* avplayerCuterTests.xctest */,
+				EA1858901DCC953000161AE5 /* avplayerCuterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA18586E1DCC953000161AE5 /* avplayerCuter */ = {
+			isa = PBXGroup;
+			children = (
+				EA1858721DCC953000161AE5 /* AppDelegate.h */,
+				EA1858731DCC953000161AE5 /* AppDelegate.m */,
+				EA1858751DCC953000161AE5 /* ViewController.h */,
+				EA1858761DCC953000161AE5 /* ViewController.m */,
+				EA1858781DCC953000161AE5 /* Main.storyboard */,
+				EA18587B1DCC953000161AE5 /* Assets.xcassets */,
+				EA18587D1DCC953000161AE5 /* LaunchScreen.storyboard */,
+				EA1858801DCC953000161AE5 /* Info.plist */,
+				EA18586F1DCC953000161AE5 /* Supporting Files */,
+			);
+			path = avplayerCuter;
+			sourceTree = "<group>";
+		};
+		EA18586F1DCC953000161AE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA1858701DCC953000161AE5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA1858881DCC953000161AE5 /* avplayerCuterTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA1858891DCC953000161AE5 /* avplayerCuterTests.m */,
+				EA18588B1DCC953000161AE5 /* Info.plist */,
+			);
+			path = avplayerCuterTests;
+			sourceTree = "<group>";
+		};
+		EA1858931DCC953000161AE5 /* avplayerCuterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA1858941DCC953000161AE5 /* avplayerCuterUITests.m */,
+				EA1858961DCC953000161AE5 /* Info.plist */,
+			);
+			path = avplayerCuterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA18586B1DCC953000161AE5 /* avplayerCuter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA1858991DCC953000161AE5 /* Build configuration list for PBXNativeTarget "avplayerCuter" */;
+			buildPhases = (
+				EA1858681DCC953000161AE5 /* Sources */,
+				EA1858691DCC953000161AE5 /* Frameworks */,
+				EA18586A1DCC953000161AE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = avplayerCuter;
+			productName = avplayerCuter;
+			productReference = EA18586C1DCC953000161AE5 /* avplayerCuter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA1858841DCC953000161AE5 /* avplayerCuterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA18589C1DCC953000161AE5 /* Build configuration list for PBXNativeTarget "avplayerCuterTests" */;
+			buildPhases = (
+				EA1858811DCC953000161AE5 /* Sources */,
+				EA1858821DCC953000161AE5 /* Frameworks */,
+				EA1858831DCC953000161AE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA1858871DCC953000161AE5 /* PBXTargetDependency */,
+			);
+			name = avplayerCuterTests;
+			productName = avplayerCuterTests;
+			productReference = EA1858851DCC953000161AE5 /* avplayerCuterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA18588F1DCC953000161AE5 /* avplayerCuterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA18589F1DCC953000161AE5 /* Build configuration list for PBXNativeTarget "avplayerCuterUITests" */;
+			buildPhases = (
+				EA18588C1DCC953000161AE5 /* Sources */,
+				EA18588D1DCC953000161AE5 /* Frameworks */,
+				EA18588E1DCC953000161AE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA1858921DCC953000161AE5 /* PBXTargetDependency */,
+			);
+			name = avplayerCuterUITests;
+			productName = avplayerCuterUITests;
+			productReference = EA1858901DCC953000161AE5 /* avplayerCuterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA1858641DCC953000161AE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = aee;
+				TargetAttributes = {
+					EA18586B1DCC953000161AE5 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = VQ5GJ97852;
+						ProvisioningStyle = Automatic;
+					};
+					EA1858841DCC953000161AE5 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EA18586B1DCC953000161AE5;
+					};
+					EA18588F1DCC953000161AE5 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EA18586B1DCC953000161AE5;
+					};
+				};
+			};
+			buildConfigurationList = EA1858671DCC953000161AE5 /* Build configuration list for PBXProject "avplayerCuter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA1858631DCC953000161AE5;
+			productRefGroup = EA18586D1DCC953000161AE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA18586B1DCC953000161AE5 /* avplayerCuter */,
+				EA1858841DCC953000161AE5 /* avplayerCuterTests */,
+				EA18588F1DCC953000161AE5 /* avplayerCuterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA18586A1DCC953000161AE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA18587F1DCC953000161AE5 /* LaunchScreen.storyboard in Resources */,
+				EA18587C1DCC953000161AE5 /* Assets.xcassets in Resources */,
+				EA18587A1DCC953000161AE5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1858831DCC953000161AE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA18588E1DCC953000161AE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA1858681DCC953000161AE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA1858771DCC953000161AE5 /* ViewController.m in Sources */,
+				EA1858741DCC953000161AE5 /* AppDelegate.m in Sources */,
+				EA1858711DCC953000161AE5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1858811DCC953000161AE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA18588A1DCC953000161AE5 /* avplayerCuterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA18588C1DCC953000161AE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA1858951DCC953000161AE5 /* avplayerCuterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA1858871DCC953000161AE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA18586B1DCC953000161AE5 /* avplayerCuter */;
+			targetProxy = EA1858861DCC953000161AE5 /* PBXContainerItemProxy */;
+		};
+		EA1858921DCC953000161AE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA18586B1DCC953000161AE5 /* avplayerCuter */;
+			targetProxy = EA1858911DCC953000161AE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA1858781DCC953000161AE5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA1858791DCC953000161AE5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA18587D1DCC953000161AE5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA18587E1DCC953000161AE5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA1858971DCC953000161AE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA1858981DCC953000161AE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA18589A1DCC953000161AE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VQ5GJ97852;
+				INFOPLIST_FILE = avplayerCuter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aee.avplayerCuter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA18589B1DCC953000161AE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VQ5GJ97852;
+				INFOPLIST_FILE = avplayerCuter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aee.avplayerCuter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EA18589D1DCC953000161AE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = avplayerCuterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aee.avplayerCuterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/avplayerCuter.app/avplayerCuter";
+			};
+			name = Debug;
+		};
+		EA18589E1DCC953000161AE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = avplayerCuterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aee.avplayerCuterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/avplayerCuter.app/avplayerCuter";
+			};
+			name = Release;
+		};
+		EA1858A01DCC953000161AE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = avplayerCuterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aee.avplayerCuterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = avplayerCuter;
+			};
+			name = Debug;
+		};
+		EA1858A11DCC953000161AE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = avplayerCuterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aee.avplayerCuterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = avplayerCuter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA1858671DCC953000161AE5 /* Build configuration list for PBXProject "avplayerCuter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1858971DCC953000161AE5 /* Debug */,
+				EA1858981DCC953000161AE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA1858991DCC953000161AE5 /* Build configuration list for PBXNativeTarget "avplayerCuter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA18589A1DCC953000161AE5 /* Debug */,
+				EA18589B1DCC953000161AE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA18589C1DCC953000161AE5 /* Build configuration list for PBXNativeTarget "avplayerCuterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA18589D1DCC953000161AE5 /* Debug */,
+				EA18589E1DCC953000161AE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA18589F1DCC953000161AE5 /* Build configuration list for PBXNativeTarget "avplayerCuterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1858A01DCC953000161AE5 /* Debug */,
+				EA1858A11DCC953000161AE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA1858641DCC953000161AE5 /* Project object */;
+}
