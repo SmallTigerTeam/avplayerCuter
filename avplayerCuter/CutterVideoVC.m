@@ -11,6 +11,8 @@ static CGFloat imageWidth;
 static CGFloat imageheight;
 #define  ScreenW [UIScreen mainScreen].bounds.size.width
 #define  ScreeH  [UIScreen mainScreen].bounds.size.height
+#define randomName @"naiyuwruww33"
+
 
 @interface CutterVideoVC ()<UIScrollViewDelegate>
 
@@ -22,6 +24,7 @@ static CGFloat imageheight;
 @property(nonatomic,strong) NSTimer *timer;
 //底部的预览视图
 @property(nonatomic,strong) UIScrollView *quickLookView;
+@property (nonatomic,strong) NSMutableArray *quickLookArr;
 //刻度尺
 @property(nonatomic,strong) UIImageView *positionImageView;
 
@@ -44,6 +47,8 @@ static CGFloat imageheight;
 
 @property (nonatomic,strong) UIView *bgView;
 
+
+
 @end
 
 @implementation CutterVideoVC
@@ -51,10 +56,11 @@ static CGFloat imageheight;
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    self.view.backgroundColor=[UIColor grayColor];
+    self.view.backgroundColor=[UIColor blackColor];
     [self.view addSubview:self.beginCutBtn];
     [self.beginCutBtn addTarget:self action:@selector(beginCutBtnDidClicked) forControlEvents:UIControlEventTouchUpInside];
-   
+    
+    
 }
 
 -(void)setSourceURL:(NSURL *)sourceURL
@@ -63,6 +69,15 @@ static CGFloat imageheight;
     [self.redView removeFromSuperview];
     _isCutting=NO;
     _isPlaying=NO;
+    _beginlabel.text=[NSString stringWithFormat:@"%zd",0];
+    _playerlayer=nil;
+    _player=nil;
+    
+    for (UIImageView *img in _quickLookArr) {
+        [img removeFromSuperview];
+    }
+    [_quickLookArr removeAllObjects];
+    
      [_beginCutBtn setTitle:@"开始裁剪" forState:UIControlStateNormal];
       _hasBeginTime=NO;
         _sourceURL=sourceURL;
@@ -80,13 +95,17 @@ static CGFloat imageheight;
         imageheight=firstImage.size.height;
         CGFloat scale = imageWidth/imageheight;
     
-        if (imageheight>[UIScreen mainScreen].bounds.size.height-140) {
-            imageheight=[UIScreen mainScreen].bounds.size.height-140;
-            imageWidth=imageheight*(scale);
-        }
+//        if (imageheight>[UIScreen mainScreen].bounds.size.height-140) {
+//            imageheight=[UIScreen mainScreen].bounds.size.height-140;
+//            imageWidth=imageheight*(scale);
+//        }
+    imageWidth = ScreenW;
+    imageheight = ScreenW / scale;
     
     
-    self.firstImageView.frame=CGRectMake((ScreenW-imageWidth)*0.5, 44, imageWidth, imageheight);
+    
+    
+    self.firstImageView.frame=CGRectMake((ScreenW-imageWidth)*0.5, 0, imageWidth, imageheight);
         _firstImageView.image=firstImage;
     
         [self.view addSubview:_firstImageView];
@@ -175,11 +194,16 @@ static CGFloat imageheight;
         CMTime time = _player.currentTime;
         
         CGFloat floatTime=time.value*1.0f/time.timescale;
+//        CGFloat scale = time.value/_asset.duration.value;
+//        NSLog(@"%.2f",scale);
         NSInteger currentTime=[[NSNumber numberWithFloat:floatTime] integerValue];
         _beginlabel.text=[NSString stringWithFormat:@"%zd",currentTime];
-//        NSLog(@"%zd",currentTime);
+        NSLog(@"%.2f",floatTime);
+        if (floatTime<_totalTime) {
+            
+            [_quickLookView setContentOffset:CGPointMake(floatTime*(50*(imageWidth/imageheight)), 0) animated:YES];
+        }
         
-        [_quickLookView setContentOffset:CGPointMake(floatTime*(50*(imageWidth/imageheight)), 0) animated:YES];
         
     }
     if (_player.currentTime.value==_asset.duration.value) {
@@ -200,6 +224,7 @@ static CGFloat imageheight;
         
         UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(ScreenW*0.5+50*(imageWidth/imageheight)*i, 0, 50*(imageWidth/imageheight), 50)];
         imageView.image=cImage;
+        [self.quickLookArr addObject:imageView];
         [_quickLookView addSubview:imageView];
     }
     
@@ -272,12 +297,15 @@ static CGFloat imageheight;
     
     if([_beginCutBtn.currentTitle isEqualToString:@"开始裁剪"] ){
         
+        [self pauseTheVideo];
+        
         [_beginCutBtn setTitle:@"剪切完成" forState:UIControlStateNormal];
         //    _beginCutBtn.enabled=NO;
-        _player=nil;
         _isCutting=YES;
     }else{
-        
+//        _player=nil;
+//        [_playerlayer removeFromSuperlayer];
+//        _playerlayer=nil;
         [self beginToCutterVideo];
     }
     
@@ -316,7 +344,7 @@ static CGFloat imageheight;
     
     AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mainComposition presetName:AVAssetExportPreset1280x720];
     
-    exporter.outputURL = [self clipUrlWithName:@"hel99"];
+    exporter.outputURL = [self clipUrl];
     exporter.outputFileType = AVFileTypeMPEG4;
     exporter.shouldOptimizeForNetworkUse = YES;
     NSLog(@"%@",exporter.outputURL);
@@ -326,10 +354,7 @@ static CGFloat imageheight;
     [exporter exportAsynchronouslyWithCompletionHandler:^{
        
         NSLog(@"%zd",exporter.status);
-        dispatch_async(dispatch_get_main_queue(), ^{
-           
-            
-        });
+     
         switch (exporter.status) {
    
             case AVAssetExportSessionStatusWaiting:
@@ -340,7 +365,7 @@ static CGFloat imageheight;
                 NSLog(@"exporting completed");
                 dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf.bgView removeFromSuperview];
-                    self.sourceURL=[self clipUrlWithName:@"hel99"];
+                    self.sourceURL=[self clipUrl];
                     
                 });
              
@@ -348,7 +373,10 @@ static CGFloat imageheight;
                 
                 break;
             default:
-                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                   [weakSelf.bgView removeFromSuperview];
+                });
                 NSLog(@"exporting failed %@",[exporter error]);
                 break;
         }
@@ -409,10 +437,10 @@ static CGFloat imageheight;
     }
     return _redView;
 }
-- (NSURL*)clipUrlWithName:(NSString *)name {
+- (NSURL*)clipUrl {
     NSArray *docPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
     NSString *documentsPath = [docPath objectAtIndex:0];
-    return [NSURL fileURLWithPath:[documentsPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4",name]]];
+    return [NSURL fileURLWithPath:[documentsPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4",randomName]]];
 }
 -(UIImageView *)firstImageView
 {
@@ -463,5 +491,14 @@ static CGFloat imageheight;
     
     return _positionImageView;
 }
+
+-(NSMutableArray *)quickLookArr
+{
+    if (_quickLookArr==nil) {
+        _quickLookArr=[NSMutableArray array];
+    }
+    return _quickLookArr;
+}
+
 
 @end
