@@ -4,14 +4,14 @@
 //
 //  Created by mac_w on 2016/11/4.
 //  Copyright © 2016年 aee.wutaotao All rights reserved.
-//  剪切之后要保存的文件名字需要每次都改,不然保存不了....
+//  ...
 
 #import "CutterVideoVC.h"
 static CGFloat imageWidth;
 static CGFloat imageheight;
 #define  ScreenW [UIScreen mainScreen].bounds.size.width
 #define  ScreeH  [UIScreen mainScreen].bounds.size.height
-#define randomName @"naiyuwruww33"
+#define randomName @"nai8uww33"
 
 
 @interface CutterVideoVC ()<UIScrollViewDelegate>
@@ -87,7 +87,6 @@ static CGFloat imageheight;
     _totalTime = [[NSNumber numberWithFloat:totalTime] integerValue];
         int time=[[NSNumber  numberWithFloat:totalTime] intValue];
     
-    
         NSTimeInterval begintime=[[NSNumber numberWithInt:0] doubleValue] ;
         UIImage *firstImage=[self thumbnailImageForVideo:sourceURL atTime:begintime];
     
@@ -95,13 +94,12 @@ static CGFloat imageheight;
         imageheight=firstImage.size.height;
         CGFloat scale = imageWidth/imageheight;
     
-//        if (imageheight>[UIScreen mainScreen].bounds.size.height-140) {
-//            imageheight=[UIScreen mainScreen].bounds.size.height-140;
-//            imageWidth=imageheight*(scale);
-//        }
     imageWidth = ScreenW;
     imageheight = ScreenW / scale;
-    
+            if (imageheight>[UIScreen mainScreen].bounds.size.height-140) {
+                imageheight=[UIScreen mainScreen].bounds.size.height-140;
+                imageWidth=imageheight*(scale);
+            }
     
     
     
@@ -316,6 +314,12 @@ static CGFloat imageheight;
 //裁剪操作
 -(void)beginToCutterVideo{
     
+       NSFileManager *fileMag=[NSFileManager defaultManager];
+    
+       [fileMag removeItemAtURL:[self clipUrl] error:nil];
+    
+    
+    
     _bgView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenW, ScreeH)];
     _bgView.backgroundColor=[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     UIActivityIndicatorView *prosses=[[UIActivityIndicatorView alloc]initWithFrame:CGRectMake((ScreenW-30)*0.5, (ScreeH-30)*0.5, 30, 30)];
@@ -389,6 +393,18 @@ static CGFloat imageheight;
     
     NSLog(@"kaishikaishikaishi");
 }
+
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+ 
+    
+    
+    
+}
+
 
 
 //获取视频中图片
@@ -499,6 +515,8 @@ static CGFloat imageheight;
     }
     return _quickLookArr;
 }
+
+
 
 
 @end
