@@ -25,6 +25,7 @@
 		EA1858B51DCCAA8700161AE5 /* player_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1858AD1DCCAA8700161AE5 /* player_pause@2x.png */; };
 		EA1858B61DCCAA8700161AE5 /* player_play.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1858AE1DCCAA8700161AE5 /* player_play.png */; };
 		EA1858B71DCCAA8700161AE5 /* player_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1858AF1DCCAA8700161AE5 /* player_play@2x.png */; };
+		EA801DA21DEDB929008DC335 /* mergerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA801DA11DEDB929008DC335 /* mergerVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		EA1858AD1DCCAA8700161AE5 /* player_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_pause@2x.png"; sourceTree = "<group>"; };
 		EA1858AE1DCCAA8700161AE5 /* player_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_play.png; sourceTree = "<group>"; };
 		EA1858AF1DCCAA8700161AE5 /* player_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_play@2x.png"; sourceTree = "<group>"; };
+		EA801DA01DEDB929008DC335 /* mergerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mergerVC.h; sourceTree = "<group>"; };
+		EA801DA11DEDB929008DC335 /* mergerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mergerVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				EA1858731DCC953000161AE5 /* AppDelegate.m */,
 				EA1858751DCC953000161AE5 /* ViewController.h */,
 				EA1858761DCC953000161AE5 /* ViewController.m */,
+				EA801DA01DEDB929008DC335 /* mergerVC.h */,
+				EA801DA11DEDB929008DC335 /* mergerVC.m */,
 				EA1858A21DCC97AD00161AE5 /* CutterVideoVC.h */,
 				EA1858A31DCC97AD00161AE5 /* CutterVideoVC.m */,
 				EA15E4501DCD79FC00FA3275 /* UIViewController+cutter.h */,
@@ -318,6 +323,7 @@
 			files = (
 				EA1858771DCC953000161AE5 /* ViewController.m in Sources */,
 				EA1858A41DCC97AD00161AE5 /* CutterVideoVC.m in Sources */,
+				EA801DA21DEDB929008DC335 /* mergerVC.m in Sources */,
 				EA1858741DCC953000161AE5 /* AppDelegate.m in Sources */,
 				EA15E4521DCD79FC00FA3275 /* UIViewController+cutter.m in Sources */,
 				EA1858711DCC953000161AE5 /* main.m in Sources */,
